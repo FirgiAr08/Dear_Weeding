@@ -106,7 +106,42 @@
           </form>
         </div>
     </section>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
 
+    <script>
+      const stickyTop = document.querySelector('.sticky-top');
+      const offcanvas = document.querySelector('.offcanvas');
+
+      offcanvas.addEventListener('show.bs.offcanvas', function() {
+        stickyTop.style.overflow = 'visible' ;
+      });
+
+      offcanvas.addEventListener('hidden.bs.offcanvas', function() {
+        stickyTop.style.overflow = 'hidden' ;
+      }); 
+
+
+
+    </script>
+
+    
+    <script>
+        simplyCountdown(".simply-countdown", {
+        year: 2027, // required
+        month: 11, // required
+        day: 25, // required
+        hours: 8, // Default is 0 [0-23] integer
+        words: {
+          // Words displayed into the
+          days: { singular: "hari", plural: "hari" },
+          hours: { singular: "jam", plural: "jam" },
+          minutes: { singular: "menit", plural: "menit" },
+          seconds: { singular: "detik", plural: "detik" },
+        },
+      });
+    </script>
     <script>
     window.addEventListener("load", function() {
     const form = document.getElementById('my-form');
